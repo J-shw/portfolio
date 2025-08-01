@@ -17,6 +17,7 @@
             overflow: hidden;
             background: white; 
             position: relative;
+            overflow: hidden;
         }
 
         body::before {
@@ -88,6 +89,20 @@
             0% { transform: translate(0, 0) rotate(0deg); }
             50% { transform: translate(-10vw, -5vh) rotate(-5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @media (max-width: 480px) {
+            body::before {
+                width: 70vw; 
+                height: 35vh;
+                border-bottom-right-radius: 50%;
+            }
+
+            body::after {
+                width: 80vw;
+                height: 45vh;
+                border-top-left-radius: 50%; 
+            }
         }
     </style>
 </head>
