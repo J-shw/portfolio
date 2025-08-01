@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <title>Whitticase</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: black;
+            background: white; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25vw;
+            height: 50vh;
+            background: linear-gradient(135deg, #007EA7 0%, #667eea 100%);
+            box-shadow: 0 8px 32px 0 rgba(202, 202, 202, 0.37);
+            border-bottom-right-radius: 20%; 
+            z-index: -1;
+            animation: driftTwo 15s ease-in-out infinite alternate-reverse;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 25vw;
+            height: 60vh;
+            background: linear-gradient(45deg, #4facfe 0%, #007EA7 100%);
+            box-shadow: 0 8px 32px 0 rgba(202, 202, 202, 0.37);
+            border-top-left-radius: 20%;
+            z-index: -1;
+            animation: driftOne 10s ease-in-out infinite alternate;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0);
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .buttons {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .buttons a {
+          font-size: xx-large;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+          color: black;
+        }
+
+        .buttons a:hover {
+          opacity: 0.8;
+        }
+
+        @keyframes driftOne {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(10vw, 5vh) rotate(5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @keyframes driftTwo {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-10vw, -5vh) rotate(-5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @media (max-width: 480px) {
+            body::before {
+                width: 70vw; 
+                height: 35vh;
+                border-bottom-right-radius: 50%;
+            }
+
+            body::after {
+                width: 80vw;
+                height: 45vh;
+                border-top-left-radius: 50%; 
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          body{
+            color: white;
+            background: rgb(7, 15, 26); 
+          }
+          .buttons a {
+            color: white;
+          }
+
+          body::before {
+            background: linear-gradient(135deg, #00131A 0%, #667eea 100%);
+            box-shadow: 0 8px 32px 0 rgba(113, 111, 111, 0.37);
+          }
+          body::after {
+            background: linear-gradient(45deg, #002444 0%, #007EA7 100%);
+            box-shadow: 0 8px 32px 0 rgba(77, 74, 74, 0.37);
+          }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Whitticase</h1>
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/josh-whitticase-847746171/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/J-shw" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+</body>
+</html>
