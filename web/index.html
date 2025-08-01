@@ -14,7 +14,6 @@
             align-items: center;
             min-height: 100vh;
             color: black;
-            overflow: hidden;
             background: white; 
             position: relative;
             overflow: hidden;
@@ -104,6 +103,22 @@
                 border-top-left-radius: 50%; 
             }
         }
+
+        @media (prefers-color-scheme: dark) {
+          body{
+            color: white;
+            background: rgb(7, 15, 26); 
+          }
+          .buttons a {
+            color: white;
+          }
+
+          body::before {
+            background: linear-gradient(135deg, #00131A 0%, #667eea 100%);
+          }
+          body::after {
+            background: linear-gradient(45deg, #002444 0%, #007EA7 100%);
+          }
     </style>
 </head>
 <body>
